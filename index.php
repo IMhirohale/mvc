@@ -22,6 +22,7 @@ require_once ROOT_PATH.'/library/RedisSession.php';
 
 //加载基本消息提示类
 require_once ROOT_PATH.'/library/Message.php';
+require_once ROOT_PATH.'/library/Helper.php';
 
 //加载mysql存储session类
 require_once ROOT_PATH.'/library/MysqlSession.php';

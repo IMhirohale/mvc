@@ -56,5 +56,26 @@ class Model{
 		
 		return $res;
 	}
+
+	public function insert($sql){
+		if(empty($this->_db)){
+			$this->_db = Db::getInstance()->getPDO();
+		}
+		$line = $this->_db->exec($sql);
+		return $line;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 }

@@ -2,21 +2,29 @@
 
 class Controller_Index{
 
-	private $obj;
-	private $smarty;
-
-	public function __construct(){
-		$this->obj = new Model_Index();
-	}
-	
 	public function index(){
 		
-		echo "欢迎来到首页";	
-		$userInfo = $this->obj->getInfo();		
-		$this->smarty = new Smarty();
-		$this->smarty->assign('user', $userInfo);
-		$this->smarty->display(ROOT_PATH.'/views/index.tpl');
+		$content = file_get_contents('/home/homework/app/mvc/views/index.html');
+		echo $content;exit;
 
+	}
+
+	public function register(){
+		$content = file_get_contents('/home/homework/app/mvc/views/register.html');
+		echo $content;exit;
+
+	}
+
+	public function login(){
+		$content = file_get_contents('/home/homework/app/mvc/views/login.html');
+		echo $content;exit;
+
+	}
+
+	public function success(){
+		
+		$content = file_get_contents('/home/homework/app/mvc/views/success.html');
+		echo $content;exit;
 	}
 
 }
